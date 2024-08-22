@@ -3,3 +3,4 @@ A repo for practicing designing and building various web components - Challenges
 
 Right now, this repo contains the following components : 
 - A QR code flashcard
+- A blog preview card
