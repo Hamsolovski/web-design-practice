@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Screenshot
 
-![here](./screenshot2.png)
+![here](./assets/images/screenshot2.png)
 
 ### Links
 
