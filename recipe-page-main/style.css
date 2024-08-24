@@ -66,32 +66,74 @@ li::marker {
   }
 }
 
-.recipe-ingredients, .recipe-instructions {
-    padding-bottom: 20px;
-    border-bottom: solid 1px var(--line-color);
+.recipe-ingredients,
+.recipe-instructions {
+  padding-bottom: 20px;
+  border-bottom: solid 1px var(--line-color);
 }
 
 .recipe-nutrition {
   table {
     width: 100%;
+    border-collapse: collapse;
   }
 
   th,
   td {
     padding: 10px;
-    border-bottom: solid 1px var(--line-color);
-    width: 50%
+    width: 50%;
+    text-align: start;
   }
+
+  tr:not(:last-child) {
+        border-bottom: 1px solid var(--line-color);
+  }
+  
 
   th {
     font-weight: 400;
-    text-align: start;
     padding-left: 3rem;
   }
 
   .nut-values {
     font-weight: 700;
     color: var(--title-color);
-    text-align: start;
+  }
+}
+
+@media screen and (width <= 800px) {
+  body {
+    margin: 0;
+    border-radius: none;
+    background-color: white;
+  }
+
+  .recipe-page {
+    width: 100%;
+    padding: 0;
+  }
+
+  .recipe-pic {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  header {
+    padding: 10px 30px;
+  }
+
+  #prep-time-card, .recipe-ingredients, .recipe-instructions, .recipe-nutrition {
+    margin: 10px 30px;
+  }
+
+  ul, ol {
+    padding: 0 8px;
+    margin: 0 8px;
+  }
+
+  .attribution {
+    border-top: solid 1px black;
+    padding: 20px;
+    text-align: center;
   }
 }
