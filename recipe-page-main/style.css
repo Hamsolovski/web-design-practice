@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+* {
+  --bg-color: hsl(30, 18%, 87%);
+  --secondary-color: hsl(330, 100%, 98%);
+  --text-color: hsl(24, 5%, 18%);
+  --title-color: hsl(332, 51%, 32%);
+  --line-color: hsl(30, 18%, 87%);
+  --title-font: "Young Serif", serif;
+  --text-font: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: var(--text-font);
+  color: hsl(24, 5%, 18%);
+}
+
+h1,
+h2 {
+  font-family: var(--title-font);
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--title-color);
+}
+
+li {
+  margin: 1rem;
+  padding-left: 1rem;
+}
+
+li::marker {
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.recipe-page {
+  margin: auto;
+  width: 800px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.recipe-pic {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#prep-time-card {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin: 30px 0;
+  h2 {
+    font-size: 1.2rem;
+    font-family: var(--text-font);
+    font-weight: 700;
+    margin-top: 0;
+  }
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  padding-bottom: 20px;
+  border-bottom: solid 1px var(--line-color);
+}
+
+.recipe-nutrition {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    width: 50%;
+    text-align: start;
+  }
+
+  tr:not(:last-child) {
+        border-bottom: 1px solid var(--line-color);
+  }
+  
+
+  th {
+    font-weight: 400;
+    padding-left: 3rem;
+  }
+
+  .nut-values {
+    font-weight: 700;
+    color: var(--title-color);
+  }
+}
+
+@media screen and (width <= 800px) {
+  body {
+    margin: 0;
+    border-radius: none;
+    background-color: white;
+  }
+
+  .recipe-page {
+    width: 100%;
+    padding: 0;
+  }
+
+  .recipe-pic {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  header {
+    padding: 10px 30px;
+  }
+
+  #prep-time-card, .recipe-ingredients, .recipe-instructions, .recipe-nutrition {
+    margin: 10px 30px;
+  }
+
+  ul, ol {
+    padding: 0 8px;
+    margin: 0 8px;
+  }
+
+  .attribution {
+    border-top: solid 1px black;
+    padding: 20px;
+    text-align: center;
+  }
+}
