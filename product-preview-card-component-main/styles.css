@@ -78,8 +78,9 @@ body {
     text-decoration: line-through;
 }
 
-button {
+.cart-button {
     background-color: var(--highlight-color);
+    text-decoration: none;
     padding: 1rem;
     width: 100%;
     border: none;
@@ -93,9 +94,7 @@ button {
     font-size: 1rem;
     font-weight: 600;
     &:hover {
-        background-color: white;
-        border: 1px solid var(--highlight-color);
-        color: var(--highlight-color);
+        background-color: var(--title-color);
     }
 }
 
