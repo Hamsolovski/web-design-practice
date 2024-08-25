@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    --bg-color: hsl(30, 38%, 92%);
+    --highlight-color: hsl(158, 36%, 37%);
+    --text-color: hsl(228, 12%, 48%);
+    --title-color: hsl(212, 21%, 14%);
+    --title-font: "Fraunces", serif;
+    --text-font: "Montserrat", sans-serif;
+    --text-size: 1rem;
+    --title-size: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+    --label-size: .8rem;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+}
+
+.card {
+    margin: auto;
+    background-color: white;
+    width: 375px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-banner {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-category {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: var(--label-size);
+    letter-spacing: .3rem;
+}
+
+.card-title {
+    color: var(--title-color);
+    font-size: var(--title-size);
+    font-family: var(--title-font);
+    font-weight: 700;
+    margin: .5rem 0;
+}
+
+.card-details {
+    color: var(--text-color);
+    line-height: 1.5rem;
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.discounted-price {
+    color: var(--highlight-color);
+    font-size: var(--title-size);
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+.former-price {
+    color: var(--text-color);
+    font-size: var(--label-size);
+    text-decoration: line-through;
+}
+
+.cart-button {
+    background-color: var(--highlight-color);
+    text-decoration: none;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    color: white;
+    font-family: var(--text-font);
+    font-size: 1rem;
+    font-weight: 600;
+    &:hover {
+        background-color: var(--title-color);
+    }
+}
+
+.attribution {
+    margin: 30px 30px 0 30px;
+    text-align: center;
+} 
+
+@media screen and (width >= 800px) {
+    .card {
+        margin: 100px 20vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        width: fit-content;
+    }
+
+    .card-banner {
+        height: 0;
+        min-height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover;
+        object-fit: cover;
+    }
+}
