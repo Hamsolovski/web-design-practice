@@ -59,39 +59,76 @@ header {
     box-shadow: 10px 5px 25px -10px var(--text-color);
 
     img {
-        align-self: flex-end;
+      align-self: flex-end;
     }
 
-    h2, p {
-        margin: 0;
+    h2,
+    p {
+      margin: 0;
     }
 
     h2 {
-        color: var(--title-color);
-        font-weight: 600;
+      color: var(--title-color);
+      font-weight: 600;
     }
 
     p {
-        margin: 0 0 40px 0;
-        color: var(--text-color)
+      margin: 0 0 40px 0;
+      color: var(--text-color);
     }
   }
   .supervisor {
-    border-top : 5px solid var(--supervisor-color);
+    border-top: 5px solid var(--supervisor-color);
   }
   .team {
-    border-top : 5px solid var(--team-color);
+    border-top: 5px solid var(--team-color);
   }
   .karma {
-    border-top : 5px solid var(--karma-color);
+    border-top: 5px solid var(--karma-color);
   }
   .calc {
-    border-top : 5px solid var(--calc-color);
+    border-top: 5px solid var(--calc-color);
   }
 }
 
 footer {
-    margin: 40px 0;
-    text-align: center;
+  margin: 40px 0;
+  text-align: center;
 }
 
+@media screen and (width >= 600px) {
+  header {
+    margin: 0 30vw;
+  }
+
+  @media screen and (width >= 1400px) {
+    .card-list {
+      margin: 0 5vw;
+      column-gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        ". b ."
+        "a b d"
+        "a c d"
+        ". c .";
+    }
+
+    .supervisor {
+      grid-area: a;
+    }
+
+    .team {
+      grid-area: b;
+    }
+
+    .karma {
+      grid-area: c;
+    }
+
+    .calc {
+      grid-area: d;
+    }
+  }
+}
