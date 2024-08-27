@@ -98,7 +98,14 @@ footer {
 
 @media screen and (width >= 600px) {
   header {
-    margin: 0 30vw;
+    margin: 0 10vw;
+  }
+}
+
+  @media screen and (width >= 1000px) {
+    header {
+      margin: 0 30vw;
+    }
   }
 
   @media screen and (width >= 1400px) {
@@ -106,8 +113,6 @@ footer {
       margin: 0 5vw;
       column-gap: 30px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
       grid-template-areas:
         ". b ."
         "a b d"
@@ -131,4 +136,4 @@ footer {
       grid-area: d;
     }
   }
-}
+
