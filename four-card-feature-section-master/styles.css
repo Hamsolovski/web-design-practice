@@ -23,6 +23,9 @@ body {
 
 main {
   padding: 5vh 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -110,7 +113,6 @@ footer {
 
   @media screen and (width >= 1400px) {
     .card-list {
-      margin: 0 5vw;
       column-gap: 30px;
       display: grid;
       grid-template-areas:
