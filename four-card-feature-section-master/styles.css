@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  --bg-color: hsl(0, 0%, 98%);
+  --supervisor-color: hsl(180, 62%, 55%);
+  --team-color: hsl(0, 78%, 62%);
+  --karma-color: hsl(34, 97%, 64%);
+  --calc-color: hsl(212, 86%, 64%);
+  --text-color: hsl(229, 6%, 66%);
+  --title-color: hsl(234, 12%, 34%);
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --text-size: 1rem;
+  --title-size: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+  --label-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+}
+
+main {
+  padding: 5vh 20px;
+}
+
+header {
+  padding: 5vh 0;
+  color: var(--title-color);
+  text-align: center;
+  .subtitle {
+    font-size: var(--title-size);
+    font-weight: 200;
+  }
+  h1 {
+    font-size: var(--title-size);
+    font-weight: 600;
+    margin: 0;
+  }
+  .subtext {
+    font-weight: 400;
+    color: var(--text-color);
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  .card {
+    margin: auto;
+    background-color: white;
+    width: 375px;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 5px 25px -10px var(--text-color);
+
+    img {
+      align-self: flex-end;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      color: var(--title-color);
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 40px 0;
+      color: var(--text-color);
+    }
+  }
+  .supervisor {
+    border-top: 5px solid var(--supervisor-color);
+  }
+  .team {
+    border-top: 5px solid var(--team-color);
+  }
+  .karma {
+    border-top: 5px solid var(--karma-color);
+  }
+  .calc {
+    border-top: 5px solid var(--calc-color);
+  }
+}
+
+footer {
+  margin: 40px 0;
+  text-align: center;
+}
+
+@media screen and (width >= 600px) {
+  header {
+    margin: 0 30vw;
+  }
+
+  @media screen and (width >= 1400px) {
+    .card-list {
+      margin: 0 5vw;
+      column-gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        ". b ."
+        "a b d"
+        "a c d"
+        ". c .";
+    }
+
+    .supervisor {
+      grid-area: a;
+    }
+
+    .team {
+      grid-area: b;
+    }
+
+    .karma {
+      grid-area: c;
+    }
+
+    .calc {
+      grid-area: d;
+    }
+  }
+}
