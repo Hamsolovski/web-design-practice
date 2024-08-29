@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    --bg-color: hsl(210, 46%, 95%);
+    --first-comment-color: hsl(263, 55%, 52%);
+    --second-comment-color: hsl(217, 19%, 35%);
+    --third-comment-color: hsl(219, 29%, 14%);
+    --text-color: hsl(0, 0%, 81%);
+    --title-color: hsl(234, 12%, 34%);
+    --title-font: "Barlow", sans-serif;
+    --text-font: "Barlow", sans-serif;
+    --text-size: 1rem;
+    --title-size: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+    --label-size: 0.8rem;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+    padding: 5vh 2vw;
+  }
+  
+  .testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    header {
+        display: flex;
+    }
+  }
