@@ -123,3 +123,31 @@
     text-align: center;
     margin: 40px 0 0 0;
   }
+
+  @media screen and (width >= 1000px) {
+    .testimonials-list {
+      display: grid;
+      grid-template-columns: repeat(4 1fr);
+      grid-template-areas: 
+        'a a b c'
+        'd e e c';
+      gap: 20px;
+    }
+    .testimonial {
+      &&:first-of-type {
+        grid-area: a;
+      }
+      &&:nth-child(2){
+        grid-area: b;
+      }
+      &&:nth-child(3) {
+        grid-area: d;
+      }
+      &&:nth-child(4) {
+        grid-area: e;
+      }
+      &&:nth-child(5) {
+        grid-area: c;
+      }
+    }
+  }
