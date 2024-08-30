@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    --bg-color: hsl(210, 46%, 95%);
+    --first-comment-color: hsl(263, 55%, 52%);
+    --second-comment-color: hsl(217, 19%, 35%);
+    --third-comment-color: hsl(219, 29%, 14%);
+    --light-text-color: hsl(0, 0%, 81%);
+    --light-text-color-70: hsla(0, 0%, 81%, 0.7);
+    --dark-text-color: hsl(234, 12%, 34%);
+    --dark-text-color-70: hsla(234, 12%, 34%, 0.7);
+    --title-font: "Barlow Semi Condensed", sans-serif;
+    --text-font: "Barlow Semi Condensed", sans-serif;
+    --text-size: 1rem;
+    --title-size: clamp(1.2rem, 1.2rem + 1vw, 1.5rem);
+    --label-size: 0.9rem;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+    padding: 5vh 2vw;
+  }
+  
+  .testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          border-radius: 100%;
+          width: 2.5rem;
+        }
+        .name {
+          font-weight: 600;
+        }
+
+        .role {
+          font-size: var(--label-size);
+        }
+    }
+    .highlighted {
+      font-weight: 600;
+      font-size: var(--title-size)
+    }
+    .details {
+      margin: 0;
+    }
+    &&:first-of-type {
+      position: relative;
+      background-color: var(--first-comment-color);
+      color: white;
+      #quote {
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        right: 30px;
+      }
+      header {
+        img {
+          border: 3px solid hsla(0, 0%, 81%, 0.5);
+        }
+        .role {
+          color: hsla(0, 0%, 81%, 0.7);
+        }
+      }
+      section {
+        position: relative;
+        z-index: 2;
+      }
+      .details {
+        color: hsla(0, 0%, 81%, 0.7);
+      }
+    }
+    &&:nth-child(odd):not(:first-child) {
+      background-color: white;
+      color: var(--dark-text-color);
+      header {
+        .role {
+          color:var(--dark-text-color);
+        }
+      }
+      .details {
+        color:var(--dark-text-color);
+      }
+    }
+    &&:nth-child(n+2) {
+      background-color: var(--second-comment-color);
+      color: white;
+      header {
+        .role {
+          color:var(--light-text-color-70);
+        }
+        img {
+          border: 3px solid var(--light-text-color);
+        }
+      }
+      .details {
+        color:var(--light-text-color-70);
+      }
+    }
+    &&:nth-child(n+4) {
+      background-color: var(--third-comment-color);
+      header {
+        img {
+          border: 3px solid var(--first-comment-color);
+        }
+      }
+    }
+  }
+
+  .attribution {
+    text-align: center;
+    margin: 40px 0 0 0;
+  }
+
+  @media screen and (width >= 900px) {
+    .testimonials-list {
+      display: grid;
+      grid-template-columns: repeat(4 1fr);
+      grid-template-areas: 
+        'a a b c'
+        'd e e c';
+      gap: 20px;
+    }
+    .testimonial {
+      &&:first-of-type {
+        grid-area: a;
+      }
+      &&:nth-child(2){
+        grid-area: b;
+      }
+      &&:nth-child(3) {
+        grid-area: d;
+      }
+      &&:nth-child(4) {
+        grid-area: e;
+      }
+      &&:nth-child(5) {
+        grid-area: c;
+      }
+    }
+  }
