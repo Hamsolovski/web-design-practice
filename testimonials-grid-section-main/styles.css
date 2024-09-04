@@ -11,8 +11,8 @@
     --dark-text-color-70: hsla(234, 12%, 34%, 0.7);
     --title-font: "Barlow Semi Condensed", sans-serif;
     --text-font: "Barlow Semi Condensed", sans-serif;
-    --text-size: 1rem;
-    --title-size: clamp(1.2rem, 1.2rem + 1vw, 1.5rem);
+    --text-size: 1.1rem;
+    --title-size: clamp(1.1rem, 1.1rem + 1vw, 1.4rem);
     --label-size: 0.9rem;
     box-sizing: border-box;
   }
@@ -20,6 +20,7 @@
   body {
     background-color: var(--bg-color);
     font-family: var(--text-font);
+    font-size: 600;
     padding: 5vh 2vw;
   }
   
@@ -126,6 +127,7 @@
 
   @media screen and (width >= 900px) {
     .testimonials-list {
+      margin: 5vh 5vw;
       display: grid;
       grid-template-columns: repeat(4 1fr);
       grid-template-areas: 
@@ -136,6 +138,7 @@
     .testimonial {
       &&:first-of-type {
         grid-area: a;
+        min-width: 50%;
       }
       &&:nth-child(2){
         grid-area: b;
