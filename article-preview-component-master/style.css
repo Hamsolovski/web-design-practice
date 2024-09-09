@@ -18,21 +18,29 @@ body {
   font-family: var(--text-font);
   font-weight: 500;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
 }
 
 .card {
-  margin: 40px 20px;
   background-color: white;
   border-radius: 10px;
+  max-width: 350px;
+  margin: 40px 20px;
   display: flex;
   flex-direction: column;
 
   .header {
     border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
   }
 
   main {
-    padding: 30px;
+    padding: 20px 30px;
     h1 {
       color: var(--title-color);
       font-size: var(--title-size);
@@ -77,11 +85,36 @@ body {
       height: 35px;
     }
   }
-
-  
 }
 
 .attribution {
-    text-align: center;
-    margin: 40px 0 0 0;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+@media screen and (width > 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
   }
+  .card {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    height: fit-content;
+    .header {
+      object-fit: cover;
+      height: auto;
+      width: 40%;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  footer {
+    display: flex;
+  }
+}
