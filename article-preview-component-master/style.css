@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  --bg-color: hsl(212, 23%, 69%);
+  --card-color: hsl(210, 46%, 95%);
+  --text-color: hsl(214, 17%, 51%);
+  --title-color: hsl(217, 19%, 35%);
+  --svg-color: hsl(217, 19%, 35%); 
+  --title-font: "Manrope", sans-serif;
+  --text-font: "Manrope", sans-serif;
+  --text-size: 13px;
+  --title-size: 18px;
+  --label-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+  font-weight: 500;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 40px 20px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  main {
+    padding: 20px 30px;
+    h1 {
+      color: var(--title-color);
+      font-size: var(--title-size);
+      font-weight: 700;
+    }
+    p {
+      color: var(--text-color);
+    }
+  }
+
+  footer {
+    border-radius: 0 0 10px 10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    .card-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-avatar {
+      border-radius: 100%;
+      height: 50px;
+      width: 50px;
+    }
+    p {
+      margin: 0;
+      color: var(--bg-color);
+      font-size: var(--label-size);
+    }
+    .card-author {
+      font-weight: 900;
+      color: var(--title-color);
+    }
+    .social-buttons {
+      display: none;
+      align-items: center;
+      position: absolute;
+      background-color: var(--title-color);
+      height: 100%;
+      gap: 20px;
+      .share {
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+      }
+    }
+    .clicked {
+      background-color: var(--title-color) !important;
+      color: white;
+    }
+
+    
+
+    #share-button {
+      justify-self: flex-end;
+      border-radius: 100%;
+      border: none;
+      background-color: var(--card-color);
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.popup-open {
+  background-color: var(--title-color) !important;
+}
+
+.attribution {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+@media screen and (width > 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+  }
+  .card {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    height: fit-content;
+    .header {
+      object-fit: cover;
+      height: auto;
+      width: 50%;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  footer {
+    display: flex;
+    
+    .social-buttons {
+      display: flex;
+      width: fit-content;
+      position: relative;
+      bottom: 80px;
+      left: 56%;
+      padding: 12px 24px;
+      background-color: var(--title-color);
+      border-radius: 12px;
+      position:absolute;
+    }
+    .social-buttons:after,
+    .social-buttons:before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    .social-buttons:after {
+      border-color: rgba(213, 0, 0, 0);
+      border-top-color: var(--title-color);
+      border-width: 12px;
+      margin-left: -12px;
+    }
+
+    
+  }
+
+  .popup-open {
+    background-color: white !important;
+  }
+}
