@@ -17,6 +17,15 @@
     background-color: var(--bg-color);
     font-family: var(--text-font);
 
+    @media (width > 600px) {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+    }
+
     h1 {
       font-size: var(--title-size);
     }
@@ -32,14 +41,31 @@
   
   .register-form {
     background-color: white;
+    @media (width > 600px) {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 90vw;
+        padding: 20px;
+        gap: 40px;
+        border-radius: 10px;
+      }
+    }
 
     .newsletter-banner {
-      background-image: url("./assets/images/illustration-sign-up-mobile.svg");
-      height: 250px;
-      width: 100%;
+      @media (width < 600px ) {
+        background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+        height: 250px;
+        width: 100%;
+        border-radius: 0 0 20px 20px ;
+      }
+      @media (width > 600px ) {
+        width: 250px;
+        background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+        background-repeat: no-repeat;
+        border-radius: 20px ;
+      }
       background-repeat: no-repeat;
       background-size: cover;
-      border-radius: 0 0 20px 20px ;
     }
 
     .newsletter-card {
@@ -53,7 +79,6 @@
         list-style-image: url("./assets/images/icon-list.svg");
         ::marker {
           size: var(--text-font)
-          
         }
       }
       
@@ -71,15 +96,7 @@
           border-radius: 10px;
         }
       }
-
     }
-
-    
-
-  }
-
-  
-
 
 
   .register-success {
