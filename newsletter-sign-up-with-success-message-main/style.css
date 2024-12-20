@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    --bg-color: hsl(231, 7%, 60%);
+    --text-color: hsl(235, 18%, 26%);
+    --title-color: hsl(234, 29%, 20%);
+    --button-color: hsl(234, 29%, 20%);
+    --highlight-color: hsl(4, 100%, 67%);
+    --title-font: "Roboto", sans-serif;
+    --text-font: "Roboto", sans-serif;
+    --text-size: 1rem;
+    --title-size: 2rem;
+    --label-size: 0.8rem;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+
+    @media (width > 600px) {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: var(--title-size);
+    }
+
+    .hidden {
+      display: none
+    }
+  }
+
+  button {
+      font-weight: 500;
+      color: white;
+      background-color: var(--button-color);
+      border-radius: 10px;
+      padding: 10px;
+  }
+
+  
+  
+  .register-form {
+    background-color: white;
+    @media (width > 600px) {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 90vw;
+        padding: 20px;
+        gap: 40px;
+        border-radius: 10px;
+      }
+    }
+
+    .newsletter-banner {
+      @media (width < 600px ) {
+        background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+        height: 250px;
+        width: 100%;
+        border-radius: 0 0 20px 20px ;
+      }
+      @media (width > 600px ) {
+        width: 250px;
+        background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+        background-repeat: no-repeat;
+        border-radius: 20px ;
+      }
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .newsletter-card {
+      padding: 5vh 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      gap: 1.5em;
+
+      li {
+        list-style-image: url("./assets/images/icon-list.svg");
+        ::marker {
+          size: var(--text-font)
+        }
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        label {
+          font-size: var(--text-size);
+          font-weight: 700;
+        }
+        input {
+          border: 0.5px, solid, var(--bg-color);
+          padding: 10px 20px;
+          border-radius: 10px;
+        }
+        .error {
+          color: red;
+          border: 1px solid red;
+        }
+
+        .error-message {
+          color: red
+        }
+      }
+    }
+
+  .register-success {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+
+    @media (width > 600px) {
+      max-width: 60vw;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .attribution {
+    margin: 30px 30px 0 30px;
+    text-align: center;
+} 
