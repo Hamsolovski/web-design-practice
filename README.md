@@ -3,6 +3,8 @@ A repo for practicing designing and building various web components - Challenges
 
 My goal with this repo is to practice and strengthen my understanding of web design basics : HTML, CSS and Vanilla JS. 
 
+Check the [website](https://hamsolovski.github.io/web-design-practice) !
+
 ## Cards & components
 
     A QR code flashcard
